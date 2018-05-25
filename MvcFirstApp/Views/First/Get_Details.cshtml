@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MvcFirstApp.Models.Employe_list>
+
+@*@{
+    ViewBag.Title = "Get_Details";
+}*@
+
+<h2>Get Details</h2>
+
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+    <ul>
+        <li>Employee id : <b>@item.id</b></li>
+        <li>Employee Name : <b>@item.Name</b></li>
+        <li>Employee Address : <b>@item.Address</b></li>
+    </ul>
+    }
+
+}
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-12">
+          @using (Html.BeginForm("allbtn", "First", FormMethod.Post))
+        {
+        
+        <input type="submit" value="Save" class="btn btn-primary" name="save" />
+        <input type="submit" value="Draft" class="btn btn-primary" name="draft" />
+        <input type="submit" value="Cancel" class="btn btn-primary" name="cancel" />
+       
+           
+         }
+    </div>
+</div>
+
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <p>@ViewBag.Msg</p>
+        <p>PPPPPP</p>
+    </div>
+</div>
+

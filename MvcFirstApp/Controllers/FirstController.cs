@@ -12,15 +12,11 @@ namespace MvcFirstApp.Controllers
         //
         // GET: /First/
 
-       
 
-
-        public ActionResult First()
+        public ActionResult Get_Details()
         {
-
             List<Employe_list> employelist = new List<Employe_list>();
             //Employe_list emp = new Employe_list();
-
             employelist.Add(new Employe_list { id = 1, Name = "Pradeep", Address = "Marimata" });
             employelist.Add(new Employe_list { id = 2, Name = "Hemant", Address = "LIG" });
             employelist.Add(new Employe_list { id = 3, Name = "Ritesh", Address = "Vijay Nagar" });
@@ -28,8 +24,36 @@ namespace MvcFirstApp.Controllers
 
             //ViewBag.AA=employelist;
             return View(employelist);
-            
         }
+
+        [HttpPost]
+        public ActionResult allbtn(string save, string draft, string cancel)
+        {
+            if (!string.IsNullOrEmpty(save))
+                return aa();
+            else if (!string.IsNullOrEmpty(draft))
+                return bb();
+            else
+                return cc();
+        }
+
+        public ActionResult aa()
+        {
+            ViewBag.Msg = "Details Save successfully.";
+            return View();
+        }
+        public ActionResult bb()
+        {
+            ViewBag.Msg = "Details Draft successfully.";
+            return View();
+        }
+
+        public ActionResult cc()
+        {
+            ViewBag.Msg = "Details cancel successfully.";
+            return View();
+        }
+
 
         // public ActionResult DB_Connect()
         //{
@@ -48,6 +72,20 @@ namespace MvcFirstApp.Controllers
 
         //    return View(emplist);
         // }
+
+
+        //[HttpPost]
+        //public ActionResult edit(Employe_list empModel)
+        //{
+        //    ViewBag.Msg = "Details Save successfully.";
+        //    return View();
+        //}
+        //[HttpPost]
+        //public ActionResult edit_submit(Employe_list empModel)
+        //{
+        //    ViewBag.Msg = "Details Save successfully.";
+        //    return View();
+        //}
 
     }
 }
