@@ -110,11 +110,13 @@
   <ItemGroup>
     <Compile Include="Controllers\Demo1Controller.cs" />
     <Compile Include="Controllers\FirstController.cs" />
+    <Compile Include="Controllers\numController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Employe_list.cs" />
     <Compile Include="Models\FirstMod.cs" />
+    <Compile Include="Models\Numeric.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -141,10 +143,10 @@
     <Content Include="Views\First\Get_Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\First\aa.cshtml" />
+    <Content Include="Views\Demo1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Demo1\Index.cshtml" />
+    <Content Include="Views\num\opt.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
